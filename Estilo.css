@@ -1,0 +1,611 @@
+
+:root {
+    --azul-escuro: #061b38;
+    --azul: #0756a5;
+    --azul-claro: #079cf0;
+    --verde: #08b82e;
+    --branco: #ffffff;
+    --fundo: #f4f8fc;
+    --texto: #102b50;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--texto);
+    background: var(--branco);
+}
+
+a {
+    text-decoration: none;
+}
+
+/* BARRA SUPERIOR */
+
+.barra-topo {
+    background: var(--azul-escuro);
+    color: white;
+    padding: 11px 6%;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.barra-topo a {
+    color: white;
+}
+
+/* CABEÇALHO */
+
+header {
+    background: white;
+    box-shadow: 0 3px 18px rgba(0,0,0,0.08);
+    position: relative;
+    z-index: 2;
+}
+
+.cabecalho {
+    max-width: 1250px;
+    margin: auto;
+    padding: 22px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--azul);
+}
+
+.simbolo {
+    font-size: 38px;
+    font-weight: 900;
+    color: var(--azul-claro);
+}
+
+.nome-marca {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+    font-size: 19px;
+}
+
+.nome-marca small {
+    font-size: 10px;
+    margin-top: 6px;
+    color: var(--azul-escuro);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 27px;
+}
+
+nav a {
+    color: var(--azul-escuro);
+    font-weight: bold;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: var(--azul-claro);
+}
+
+.botao-topo {
+    background: var(--verde);
+    color: white;
+    padding: 13px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+/* BANNER PRINCIPAL */
+
+.hero {
+    background:
+        radial-gradient(circle at 80% 35%, #3988c7 0%, transparent 35%),
+        linear-gradient(115deg, #061b38 0%, #073e77 65%, #087fc8 100%);
+    color: white;
+    min-height: 440px;
+    display: grid;
+    grid-template-columns: 1fr 0.8fr;
+    align-items: center;
+    padding: 65px max(6%, calc((100% - 1200px) / 2));
+    overflow: hidden;
+}
+
+.hero-conteudo {
+    max-width: 620px;
+    position: relative;
+    z-index: 1;
+}
+
+.etiqueta {
+    color: #20aaff;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 5vw, 62px);
+    line-height: 1.06;
+    margin: 18px 0;
+    color: white;
+}
+
+.hero h1 span {
+    color: #12a9f8;
+}
+
+.hero p {
+    color: #e0edfa;
+    font-size: 17px;
+    max-width: 540px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.botao-whatsapp {
+    display: inline-block;
+    background: var(--verde);
+    color: white;
+    padding: 16px 23px;
+    border-radius: 35px;
+    font-weight: bold;
+    box-shadow: 0 7px 18px rgba(0,0,0,0.18);
+    transition: 0.3s;
+}
+
+.botao-whatsapp:hover {
+    background: #079d28;
+    transform: translateY(-3px);
+}
+
+.hero-detalhes {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+    font-size: 13px;
+    color: #d8ebff;
+}
+
+/* ILUSTRAÇÃO DO AR-CONDICIONADO */
+
+.hero-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 280px;
+}
+
+.ar-condicionado {
+    width: 100%;
+    text-align: center;
+}
+
+.unidade {
+    background: linear-gradient(180deg, white, #c9e5f7);
+    width: 90%;
+    max-width: 390px;
+    height: 95px;
+    margin: auto;
+    border-radius: 12px 12px 28px 28px;
+    box-shadow: 0 20px 45px rgba(0,0,0,0.3);
+    color: var(--azul);
+    font-size: 25px;
+    font-weight: 900;
+    padding: 15px;
+    position: relative;
+}
+
+.saida-ar {
+    height: 12px;
+    background: #5d7892;
+    position: absolute;
+    bottom: 12px;
+    left: 8%;
+    right: 8%;
+    border-radius: 50%;
+}
+
+.fluxo-ar {
+    color: #6ed5ff;
+    font-size: 43px;
+    margin-top: 25px;
+    letter-spacing: 8px;
+}
+
+.frase-visual {
+    color: white;
+    font-size: 25px;
+    font-style: italic;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+/* SERVIÇOS */
+
+.servicos-area {
+    max-width: 1250px;
+    margin: auto;
+    padding: 65px 25px;
+}
+
+.titulo-secao {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.titulo-secao > span {
+    color: var(--azul-claro);
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.titulo-secao h2 {
+    font-size: 32px;
+    color: var(--azul-escuro);
+    margin: 8px 0;
+}
+
+.titulo-secao p {
+    color: #687b91;
+}
+
+.servicos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.cartao-servico {
+    background: white;
+    padding: 27px 22px;
+    border-radius: 14px;
+    text-align: center;
+    box-shadow: 0 6px 22px rgba(12,54,94,0.10);
+    border: 1px solid #e8f0f8;
+    transition: 0.3s;
+}
+
+.cartao-servico:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(12,54,94,0.16);
+}
+
+.icone {
+    font-size: 34px;
+    margin-bottom: 12px;
+}
+
+.cartao-servico h3 {
+    color: var(--azul-escuro);
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+.cartao-servico p {
+    color: #61758d;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* SOBRE A EMPRESA */
+
+.sobre {
+    max-width: 1200px;
+    margin: auto;
+    padding: 55px 25px;
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: center;
+    gap: 55px;
+}
+
+.sobre-imagem {
+    min-height: 300px;
+    border-radius: 20px;
+    background:
+        radial-gradient(circle, #168dd9, transparent 55%),
+        linear-gradient(140deg, #061b38, #0b5798);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    box-shadow: 0 12px 28px rgba(7,27,53,0.2);
+}
+
+.sobre-imagem strong {
+    font-size: 85px;
+}
+
+.sobre-imagem span {
+    letter-spacing: 3px;
+    font-size: 13px;
+}
+
+.sobre-icone {
+    font-size: 45px;
+    color: #35c4ff;
+}
+
+.sobre-texto h2 {
+    color: var(--azul-escuro);
+    font-size: 32px;
+    margin: 10px 0 18px;
+}
+
+.sobre-texto h2 span {
+    color: var(--azul-claro);
+}
+
+.sobre-texto p {
+    color: #536980;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.sobre-texto ul {
+    list-style: none;
+    line-height: 2.2;
+    font-weight: bold;
+    color: var(--azul-escuro);
+    margin-bottom: 22px;
+}
+
+.botao-azul {
+    display: inline-block;
+    background: var(--azul);
+    color: white;
+    padding: 13px 22px;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+/* DIFERENCIAIS */
+
+.diferenciais {
+    background: linear-gradient(110deg, #061b38, #0756a5);
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 28px 6%;
+    gap: 20px;
+}
+
+.diferenciais div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 13px;
+}
+
+.diferenciais span {
+    font-size: 30px;
+}
+
+.diferenciais strong {
+    font-size: 13px;
+}
+
+/* CONTATO */
+
+.contato {
+    max-width: 1200px;
+    margin: 45px auto;
+    padding: 35px;
+    background: linear-gradient(110deg, #061b38, #0756a5);
+    color: white;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.contato h2 {
+    font-size: 27px;
+}
+
+.contato p,
+.telefone small {
+    color: #d8e9f8;
+}
+
+.telefone {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.telefone > span {
+    font-size: 35px;
+}
+
+.telefone div {
+    display: flex;
+    flex-direction: column;
+}
+
+.telefone strong {
+    font-size: 23px;
+}
+
+/* RODAPÉ */
+
+footer {
+    background: white;
+    border-top: 4px solid var(--azul-claro);
+    padding: 35px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    text-align: center;
+}
+
+.rodape-marca {
+    display: flex;
+    flex-direction: column;
+    color: var(--azul);
+    font-size: 19px;
+}
+
+.rodape-marca strong {
+    font-size: 23px;
+}
+
+footer p {
+    font-size: 13px;
+    color: #61758d;
+    margin: 4px;
+}
+
+.rodape-cft {
+    display: flex;
+    flex-direction: column;
+    color: var(--azul);
+}
+
+.rodape-cft span {
+    font-size: 35px;
+    font-weight: 900;
+}
+
+/* WHATSAPP FLUTUANTE */
+
+.whatsapp-flutuante {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 10;
+    background: var(--verde);
+    color: white;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 29px;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.25);
+}
+
+/* CELULAR */
+
+@media (max-width: 850px) {
+    .cabecalho {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 18px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 55px 7%;
+    }
+
+    .hero-visual {
+        margin-top: 35px;
+    }
+
+    .sobre {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .diferenciais {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contato {
+        margin: 35px 15px;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 550px) {
+    .barra-topo {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .cabecalho {
+        padding: 18px 12px;
+    }
+
+    .nome-marca {
+        font-size: 16px;
+    }
+
+    .simbolo {
+        font-size: 30px;
+    }
+
+    .hero h1 {
+        font-size: 39px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .servicos {
+        grid-template-columns: 1fr;
+    }
+
+    .titulo-secao h2,
+    .sobre-texto h2 {
+        font-size: 26px;
+    }
+
+    .diferenciais {
+        grid-template-columns: 1fr 1fr;
+        padding: 25px 12px;
+    }
+
+    .diferenciais div {
+        justify-content: flex-start;
+    }
+
+    .contato {
+        padding: 25px 18px;
+    }
+
+    .contato h2 {
+        font-size: 23px;
+    }
+
+    .telefone strong {
+        font-size: 18px;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+}
